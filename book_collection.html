@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="custom.css">
+  
+  <script src="book_collection.js" defer></script>
+  
+  <title>My Book Collection</title>
+</head>
+<body>
+  <h1 id="collection-title">My Book Collection</h1>
+  <div id="bookshelf">
+    <!-- Dynamically generated bookshelf contents -->
+  </div>
+  <form class="form">
+    <h1 id="form-title">Add A Book</h1>
+    <div class="labels">
+      <label for="title">Title:</label>
+      <label for="author">Author:</label>
+      <label for="year">Year:</label>
+      <label for="genre">Genre:</label>
+    </div>
+    <div class="inputs">
+      <input type="text" id="title-field">
+      <input type="text" id="author-field">
+      <input type="text" id="year-field">
+      <input type="text" id="genre-field">
+      
+      <input type="button" id="submit-button" value="Add To Collection">
+    </div>
+  </form>
+</body>
+</html>
