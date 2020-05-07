@@ -5,10 +5,13 @@ function Book(title, author, year, genre) {
   this.author     = author;
   this.year       = year;
   this.genre      = genre;
+  
   this.readStatus = false;
 }
 
-function addBookToCollection (book) { bookCollection.push(book); }
+function addBookToCollection (book) { 
+  bookCollection.push(book); 
+}
 
 const monteCristo = new Book('The Count of Monte Cristo', 'Alexandre Dumas', 1844, 'Adventure');
 const treasure    = new Book('Treasure Island', 'Robert Louis Stevenson', 1883, 'Adventure');
@@ -21,7 +24,7 @@ addBookToCollection(dubliners);
 const bookshelf = document.getElementById('bookshelf');
 
 function render(collection) {
-  // Drop all books from the previous table.
+  // Drop all books from the previous collection.
   while(bookshelf.firstChild){
     bookshelf.removeChild(bookshelf.firstChild);
   }
@@ -70,7 +73,7 @@ function render(collection) {
     bookshelf.appendChild(newBook);
   });
   
-  // Generate each book's read status button,
+  // Add an event listener for each book's read status button,
   let readButtons = document.getElementsByClassName('read-button');
   readButtons = Array.from(readButtons);
   readButtons.forEach( (button, i) => {
@@ -95,6 +98,7 @@ function render(collection) {
   });
 }
 
+// Submitting our form creates a new book.
 const submitButton = document.getElementById('submit-button');
 
 submitButton.addEventListener('click', function () {
@@ -103,6 +107,7 @@ submitButton.addEventListener('click', function () {
   const year   = document.getElementById('year-field').value;
   const genre  = document.getElementById('genre-field').value;
   const freshBook = new Book(title, author, year, genre);
+  
   addBookToCollection(freshBook);
   render(bookCollection);
 });
