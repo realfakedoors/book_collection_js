@@ -1,12 +1,14 @@
 let bookCollection = [];
 
-function Book(title, author, year, genre) {
-  this.title      = title;
-  this.author     = author;
-  this.year       = year;
-  this.genre      = genre;
-  
-  this.readStatus = false;
+class Book {
+  constructor(title, author, year, genre) {
+    this.title      = title;
+    this.author     = author;
+    this.year       = year;
+    this.genre      = genre;
+    
+    this.readStatus = false;
+  }
 }
 
 function addBookToCollection (book) { 
