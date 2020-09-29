@@ -96,9 +96,39 @@ body {
   background-color: lightblue;
 }
 
-/* 'Add A Book' form */
+/* Error Messages */
+
+#errors {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  
+  background-color: #cc2900;
+}
+
+.error {
+  padding: 5px;
+  
+  border: 5px solid #991f00;
+  
+  line-height: 10px;
+  color: #ffd6cc;
+}
+
+.error-title {
+  margin-top: 15px;
+}
+
+.error-body {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* 'Add A Book' Form */
 
 .form {
+  position: relative;
+  
   display: flex;
   align-items: center;
   
@@ -140,6 +170,10 @@ label {
 
 input {
   height: 22px;
+}
+
+.invalid-input {
+  border: 2px solid red;
 }
 
 #submit-button {

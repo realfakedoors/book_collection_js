@@ -13,9 +13,12 @@
 <body>
   <h1 id="collection-title">My Book Collection</h1>
   <div id="bookshelf">
-    <!-- Dynamically generated bookshelf contents -->
+    <!-- Bookshelf Contents -->
   </div>
-  <form class="form">
+  <form class="form" novalidate>
+    <div id="errors">
+      <!-- Error Messages -->
+    </div>
     <h1 id="form-title">Add A Book</h1>
     <div class="labels">
       <label for="title">Title:</label>
@@ -24,9 +27,9 @@
       <label for="genre">Genre:</label>
     </div>
     <div class="inputs">
-      <input type="text" id="title-field">
-      <input type="text" id="author-field">
-      <input type="text" id="year-field">
+      <input type="text" id="title-field" required>
+      <input type="text" id="author-field" required>
+      <input type="number" id="year-field" required min="1558" max="2020">
       <input type="text" id="genre-field">
       
       <input type="button" id="submit-button" value="Add To Collection">
